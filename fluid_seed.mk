@@ -1,5 +1,4 @@
-# Copyright (C) 2015 The CyanogenMod Project
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2019 The Fluid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,18 +14,32 @@
 
 $(call inherit-product, device/google/seed/full_seed.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/revengeos/config/common.mk)
+# Inherit some common Project Fluid stuff.
+$(call inherit-product, vendor/fluid/config/common.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
-# Gapps stuff - Define it only when you building rom with gapps
+## GApps stuff - Define only if you're really sure you can house GApps in 1.5 GB system
+# Use GApps
+# TARGET_INCLUDE_GAPPS := true
+
+# We have ARM device so GApps will be ARM
 # TARGET_GAPPS_ARCH := arm
+
+# Our system partition is too small to house all GApps so use minimal one
+# TARGET_INCLUDE_MINIMAL_GAPPS :=true
+
+# Maintainer stuff
+PRODUCT_PRODUCT_PROPERTIES += \
+  ro.fluid.maintainer=Wind/owZ \
+  ro.fluid.cpu=MSM8916
+
+# Boot animation
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := revengeos_seed
+PRODUCT_NAME := fluid_seed
 PRODUCT_DEVICE := seed
 PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := google
