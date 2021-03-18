@@ -75,6 +75,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SeedDoze
 
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8916

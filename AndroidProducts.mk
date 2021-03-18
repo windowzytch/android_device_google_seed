@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/revengeos_seed.mk
+    $(LOCAL_DIR)/arrow_seed.mk
 
 COMMON_LUNCH_CHOICES += \
-    revengeos_seed-user \
-    revengeos_seed-userdebug \
-    revengeos_seed-eng
+    arrow_seed-user \
+    arrow_seed-userdebug \
+    arrow_seed-eng
