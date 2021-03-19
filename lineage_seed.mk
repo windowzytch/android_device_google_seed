@@ -16,17 +16,24 @@
 $(call inherit-product, device/google/seed/full_seed.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/revengeos/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
 # Gapps stuff - Define it only when you building rom with gapps
 # TARGET_GAPPS_ARCH := arm
+
+# Boot animation
 TARGET_BOOT_ANIMATION_RES := 720
 
+# Project Sakura stuff
+SAKURA_OPLAUNCHER := true
+SAKURA_MAINTAINER := Wind/owZ
+
+
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := revengeos_seed
+PRODUCT_NAME := lineage_seed
 PRODUCT_DEVICE := seed
 PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := google
