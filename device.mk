@@ -75,6 +75,9 @@ PRODUCT_PACKAGES += \
     libjni_livedisplay \
     pp_calib_data_booyi_OTM1287_720p_video_mode_dsi_panel.xml
 
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8916
