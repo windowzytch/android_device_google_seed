@@ -1,5 +1,4 @@
-# Copyright (C) 2015 The CyanogenMod Project
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2020 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,18 +14,20 @@
 
 $(call inherit-product, device/google/seed/full_seed.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/revengeos/config/common.mk)
+# Inherit some common AOSP stuff.
+$(call inherit-product, vendor/aosp/config/common.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
 # Gapps stuff - Define it only when you building rom with gapps
-# TARGET_GAPPS_ARCH := arm
+TARGET_GAPPS_ARCH := arm
+
+# Boot animation
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := revengeos_seed
+PRODUCT_NAME := aosp_seed
 PRODUCT_DEVICE := seed
 PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := google
