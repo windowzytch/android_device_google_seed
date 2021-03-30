@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2019 HentaiOS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/revengeos_seed.mk
+    $(LOCAL_DIR)/hentai_seed.mk
 
 COMMON_LUNCH_CHOICES += \
-    revengeos_seed-user \
-    revengeos_seed-userdebug \
-    revengeos_seed-eng
+    hentai_seed-user \
+    hentai_seed-userdebug \
+    hentai_seed-eng
