@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/revengeos_seed.mk
+    $(LOCAL_DIR)/amy_seed.mk
 
 COMMON_LUNCH_CHOICES += \
-    revengeos_seed-user \
-    revengeos_seed-userdebug \
-    revengeos_seed-eng
+    amy_seed-user \
+    amy_seed-userdebug \
+    amy_seed-eng
